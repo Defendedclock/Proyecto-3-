@@ -1,0 +1,92 @@
+Instrucciones de Uso
+
+Este documento proporciona los pasos detallados para ejecutar y utilizar los scripts incluidos en este repositorio.
+
+1. E3Fsociety.ps1
+
+Descripción
+
+Este script en PowerShell permite la gestión de reglas de bloqueo y la visualización de un calendario interactivo a través de un menú de opciones.
+
+Pasos de ejecución
+
+Abre PowerShell y navega hasta la carpeta donde se encuentra E3Fsociety.ps1.
+
+Ejecuta:
+
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+Esto permitirá la ejecución de scripts en la sesión actual.
+
+Ejecuta el script con:
+
+.\E3Fsociety.ps1
+
+Selecciona una opción del menú interactivo:
+
+1: Mostrar calendario.
+
+2: Agregar reglas de bloqueo.
+
+3: Salir.
+
+Si deseas restaurar la configuración de seguridad después de usar el script, ejecuta:
+
+Set-ExecutionPolicy Restricted -Scope Process
+
+2. E6Script.ps1
+
+Descripción
+
+Este script en PowerShell permite consultar la fecha y hora actual, visualizar un calendario y buscar archivos según una fecha específica.
+
+Pasos de ejecución
+
+Asegúrate de que el módulo Seteolvidolahora esté disponible.
+
+Abre PowerShell y navega hasta la carpeta donde se encuentra E6Script.ps1.
+
+Habilita la ejecución de scripts temporalmente con:
+
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+Ejecuta el script con:
+
+.\E6Script.ps1
+
+Selecciona una opción del menú interactivo:
+
+1: Mostrar calendario.
+
+2: Ver la hora y la fecha.
+
+3: Buscar archivos por fecha.
+
+4: Salir.
+
+3. E13hash.py
+
+Descripción
+
+Este script en Python genera una línea base de integridad del sistema de archivos mediante la creación de hashes de los archivos en una carpeta específica.
+
+Pasos de ejecución
+
+Asegúrate de tener Python 3.x instalado en tu sistema.
+
+Configura el archivo config.txt con los siguientes parámetros:
+
+[ARGUMENTS]
+baseline = ruta/del/archivo_de_salida.pkl
+Path = ruta/de/la/carpeta_a_analizar
+tmp = ruta/del/archivo_temporal.txt
+
+Ubica HashAcquire.ps1 en la misma carpeta del script o ajusta su ruta si es necesario.
+
+Abre una terminal y navega hasta la carpeta del script.
+
+Ejecuta el siguiente comando para iniciar el proceso:
+
+python E13hash.py
+
+Una vez finalizado, la línea base generada se almacenará en el archivo especificado en baseline.
